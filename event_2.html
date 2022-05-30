@@ -15,20 +15,11 @@
         .box_wrap{
             display: flex;
             justify-content: space-between;
-            display: none;
+            /* display: none; */
 
         }
 
-        .box .box_1{
-            width: 30%;
-            height: 400px;
-            background-color: salmon;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px;
-        }
-        .box .box_2{
+        .box_1{
             width: 30%;
             height: 400px;
             background-color: salmon;
@@ -38,7 +29,7 @@
             font-size: 50px;
         }
 
-        .box .box_3{
+        .box_2{
             width: 30%;
             height: 400px;
             background-color: salmon;
@@ -48,6 +39,15 @@
             font-size: 50px;
         }
 
+        .box_3{
+            width: 30%;
+            height: 400px;
+            background-color: salmon;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
 
         .con{
             width: 400px;
@@ -80,7 +80,8 @@
     <button class="remove_color">색상빼기</button>
     
 
-    <script src="../js/btnEvent.js">
+    <script src="../js/btnEvent.js"></script>
+    <script>
         // =>외부로 스크립트를 뺏을때 script 태그 내부에 아무것도 작성하면안됨
 
         (function(){
@@ -88,7 +89,7 @@
             const box_2 = document.querySelector('.box_2')
             const box_3 = document.querySelector('.box_3')
             const boxAll = document.querySelectorAll('.box')
-
+            console.log(boxAll)
             // box_1.addEventListener('click', () => {
             //     box_1.classList.toggle('on')
             // })
@@ -107,31 +108,26 @@
 
             // box_3.addEventListener('click', () => box_3.classList.toggle('on'))
 
-            // boxAll[0].addEventListener('click', () => {
-            //     boxAll[0].classList.toggle('on')
-            // })
-            // boxAll[1].addEventListener('click', () => {
-            //     boxAll[1].classList.toggle('on')
-            // })
-            // boxAll[2].addEventListener('click', () => {
-            //     boxAll[2].classList.toggle('on')
-            // })
+            boxAll[0].addEventListener('click', () => {
+                boxAll[0].classList.toggle('on')
+            })
+            boxAll[1].addEventListener('click', () => {
+                boxAll[1].classList.toggle('on')
+            })
+            boxAll[2].addEventListener('click', () => {
+                boxAll[2].classList.toggle('on')
+            })
             
             // #home Work
             // =>for문을 이용하여 개선하기
             // =>시간이 남으면 팝업창 만들기
 
 
+
         })();
 
-        
-
-
-        
-
-        
-
     </script>
+
 
 </body>
 </html>
